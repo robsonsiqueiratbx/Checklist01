@@ -13,7 +13,12 @@
         3. Adicione uma "Web App" e copie as credenciais (apiKey, authDomain, etc).
         4. Substitua os campos vazios no objeto 'config' abaixo.
     -->
-                // 1. COLE SUAS CREDENCIAIS DO FIREBASE AQUI:
+     <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // CONFIGURAÇÃO DO FIREBASE (Substitua pelos seus dados do console do Firebase)
         const config = {
             apiKey: "AIzaSy...", 
             authDomain: "projeto-tbx.firebaseapp.com",
@@ -21,20 +26,6 @@
             storageBucket: "projeto-tbx.appspot.com",
             messagingSenderId: "123456789",
             appId: "1:123456789:web:abc123"
-        };
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-        // CONFIGURAÇÃO DO FIREBASE (Substitua pelos seus dados do console do Firebase)
-        const config = {
-            apiKey: "",
-            authDomain: "",
-            projectId: "",
-            storageBucket: "",
-            messagingSenderId: "",
-            appId: ""
         };
 
         // Fallback para o ambiente de testes se as chaves estiverem vazias
