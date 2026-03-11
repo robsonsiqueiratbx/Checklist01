@@ -13,6 +13,15 @@
         3. Adicione uma "Web App" e copie as credenciais (apiKey, authDomain, etc).
         4. Substitua os campos vazios no objeto 'config' abaixo.
     -->
+                // 1. COLE SUAS CREDENCIAIS DO FIREBASE AQUI:
+        const config = {
+            apiKey: "AIzaSy...", 
+            authDomain: "projeto-tbx.firebaseapp.com",
+            projectId: "projeto-tbx",
+            storageBucket: "projeto-tbx.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:abc123"
+        };
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
